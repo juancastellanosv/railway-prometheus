@@ -25,6 +25,20 @@ scrape_configs:
     static_configs:
       - targets: ["clients-staging.avatarfresh.com"]
 
+  - job_name: "avatarfresh_octopus"
+    metrics_path: "/metrics"
+    scrape_interval: 15s
+    scheme: "https"
+    static_configs:
+      - targets: ["octopus.avatarfresh.com"]
+
+  - job_name: "avatarfresh_main"
+    metrics_path: "/metrics"
+    scrape_interval: 15s
+    scheme: "https"
+    static_configs:
+      - targets: ["api.avatarfresh.com"]
+
   # - job_name: 'postgres'
   #   scrape_interval: 5s
   #   static_configs:
